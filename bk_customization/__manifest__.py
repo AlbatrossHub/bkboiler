@@ -32,7 +32,7 @@
     'website': '',
     'depends': ['product'],
     'data': [
-        'security/ir.model.access.csv',
+        # 'security/ir.model.access.csv',
         'views/product_template_views.xml',
     ],
     'installable': True,

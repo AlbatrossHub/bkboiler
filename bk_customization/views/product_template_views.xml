@@ -9,7 +9,7 @@
             <field name="inherit_id" ref="product.product_template_form_view"/>
             <field name="arch" type="xml">
                 <!-- Add BKB Specs section after the General Information group -->
-                <xpath expr="//group[@name='group_general_information']" position="after">
+                <xpath expr="//group[@name='internal_notes']" position="before">
                     <group name="group_bkb_specs" string="BKB Specs" optional="show">
                         <group>
                             <field name="bkb_specification"/>
