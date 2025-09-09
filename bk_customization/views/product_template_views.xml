@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <!-- Inherit product.template form view to add BKB Specs section -->
+        <record id="product_template_form_view_bkb_specs" model="ir.ui.view">
+            <field name="name">product.template.form.bkb.specs</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <!-- Add BKB Specs section after the General Information group -->
+                <xpath expr="//group[@name='group_general_information']" position="after">
+                    <group name="group_bkb_specs" string="BKB Specs" optional="show">
+                        <group>
+                            <field name="bkb_specification"/>
+                            <field name="bkb_model_no"/>
+                            <field name="bkb_size"/>
+                            <field name="bkb_sch"/>
+                            <field name="bkb_class"/>
+                            <field name="bkb_long"/>
+                            <field name="bkb_range"/>
+                        </group>
+                        <group>
+                            <field name="bkb_ref_no"/>
+                            <field name="bkb_make"/>
+                            <field name="bkb_press"/>
+                            <field name="bkb_temp"/>
+                            <field name="bkb_head"/>
+                            <field name="bkb_flow"/>
+                            <field name="bkb_hp"/>
+                        </group>
+                        <group>
+                            <field name="bkb_kw"/>
+                            <field name="bkb_rpm"/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Inherit product.template tree view to add BKB fields -->
+        <record id="product_template_tree_view_bkb_specs" model="ir.ui.view">
+            <field name="name">product.template.tree.bkb.specs</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_tree_view"/>
+            <field name="arch" type="xml">
+                <!-- Add BKB fields to tree view (optional show by default) -->
+                <xpath expr="//field[@name='list_price']" position="after">
+                    <field name="bkb_specification" optional="show"/>
+                    <field name="bkb_model_no" optional="show"/>
+                    <field name="bkb_size" optional="show"/>
+                    <field name="bkb_sch" optional="show"/>
+                    <field name="bkb_class" optional="show"/>
+                    <field name="bkb_long" optional="show"/>
+                    <field name="bkb_range" optional="show"/>
+                    <field name="bkb_ref_no" optional="show"/>
+                    <field name="bkb_make" optional="show"/>
+                    <field name="bkb_press" optional="show"/>
+                    <field name="bkb_temp" optional="show"/>
+                    <field name="bkb_head" optional="show"/>
+                    <field name="bkb_flow" optional="show"/>
+                    <field name="bkb_hp" optional="show"/>
+                    <field name="bkb_kw" optional="show"/>
+                    <field name="bkb_rpm" optional="show"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
