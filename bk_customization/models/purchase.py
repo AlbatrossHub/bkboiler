@@ -34,3 +34,4 @@ class PurchaseOrder(models.Model):
         return ''
 
     note = fields.Html('Terms and Conditions', default=_default_note)
+    customer_id = fields.Many2one("res.partner", string="Client Name")
