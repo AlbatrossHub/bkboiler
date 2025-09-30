@@ -34,6 +34,7 @@ These fields are displayed in a dedicated "BKB Specs" section in the product for
     'data': [
         'views/product_template_views.xml',
         'views/purchase_view.xml',
+        'views/mrp_views.xml'
     ],
     'installable': True,
     'auto_install': False,
