@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_mrporder_custom_fields" inherit_id="mrp.report_mrporder">
+        <!-- Locate the div with Responsible field -->
+        <xpath expr="//div[@t-if='o.user_id']" position="after">
+            <div class="col-3" t-if="o.customer_id">
+                <strong>Customer:</strong><br/>
+                <span t-field="o.customer_id">Customer Name</span>
+            </div>
+            <div class="col-3" t-if="o.sos_no">
+                <strong>SOS No:</strong><br/>
+                <span t-field="o.sos_no">SOS12345</span>
+            </div>
+        </xpath>
+    </template>
+</odoo>
